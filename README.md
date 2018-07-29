@@ -22,5 +22,5 @@ A basic JPA template with basic Spring In memory Security
 * The runnable jar is located in libs folder. 
 
 ## Running
-* You can run it from the Terminal and check that everything is working: 
-java -jar [path_to_project]\basicjpa\build\libs\basicjpa-0.0.1-SNAPSHOT.jar
+* You can run it from the Terminal and check that everything is working:          
+> java -jar [path_to_project]\basicjpa\build\libs\basicjpa-0.0.1-SNAPSHOT.jar
