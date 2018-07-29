@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.3.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.14.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -19,15 +19,22 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
+jar {
+    // in settings.gradle rootProject.name = 'basicjpa'
+    baseName = 'basicjpa'
+    group = 'fi.tapir'
+    version = '0.0.1-SNAPSHOT'
+    manifest { attributes 'Main-Class': 'fi.tapir.basicjpa.BasicjpaApplication' }
+}
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-// compile('org.springframework.boot:spring-boot-starter-security')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	runtime('org.postgresql:postgresql')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-//	testCompile('org.springframework.security:spring-security-test')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    runtime('org.postgresql:postgresql')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('org.springframework.security:spring-security-test')
 }
