@@ -1,4 +1,4 @@
-package fi.tapir.basicjpa;
+package fi.tapir.basicjpa.configuration;
 
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -52,7 +52,7 @@ public class ApplicationConfig {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
         entityManagerFactoryBean.setJpaVendorAdapter(jpaVendorAdapter());
-        entityManagerFactoryBean.setPackagesToScan("fi.tapir.basicjpa.repos");
+        entityManagerFactoryBean.setPackagesToScan("fi.tapir.basicjpa.entities");
 
         Properties jpaProperties = new Properties();
 

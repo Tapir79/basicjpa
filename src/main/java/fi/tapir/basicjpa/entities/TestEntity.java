@@ -1,4 +1,4 @@
-package fi.tapir.basicjpa.repos;
+package fi.tapir.basicjpa.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
